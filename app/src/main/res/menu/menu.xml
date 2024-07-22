@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        android:iconTint="@color/lightGreen"
+        android:textColor="@color/lightGreen"
+        />
+
+    <item
+        android:id="@+id/admin"
+        android:title="admin"
+        android:icon="@drawable/admin"
+        android:iconTint="@color/lightGreen"
+        android:textColor="@color/lightGreen"
+        />
+    <item
+        android:id="@+id/fab"
+        android:title=""
+        android:enabled="false"
+        />
+
+    <item
+        android:id="@+id/headset"
+        android:title="headset"
+        android:icon="@drawable/headset"
+        android:iconTint="@color/lightGreen"
+        android:textColor="@color/lightGreen"
+        />
+    <item
+        android:id="@+id/map"
+        android:title="map"
+        android:icon="@drawable/map"
+        android:iconTint="@color/lightGreen"
+        android:textColor="@color/lightGreen"
+        />
+</menu>

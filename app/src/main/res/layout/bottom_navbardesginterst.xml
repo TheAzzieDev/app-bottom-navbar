@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightPurple"
-    tools:context=".MainActivity">
+    tools:context=".DesginTest">
 
     <FrameLayout
         android:id="@+id/frame_layout"
@@ -24,36 +24,67 @@
         app:fabCradleRoundedCornerRadius="0dp"
         app:elevation="0dp"
         >
-        <!--
-
-         app:itemIconTint="@color/color_test" normally adding a color list would work out but
-         becuase we have a fab we need to set a default value
-        -->
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bottomNavigationView"
-            android:layout_marginEnd="10dp"
-            android:paddingTop= "5dp"
-            android:paddingBottom="5dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
             android:background="@drawable/mobile_custom"
-            app:menu="@menu/menu_test"
-            app:itemIconTint="@color/test1"
-            app:itemIconSize="40dp"
-            />
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            >
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageButton
+                    android:id="@+id/gallery"
+                    android:layout_width="50dp"
+                    android:contentDescription="something"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gallery"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:onClick="navClick"
+                    />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageButton
+                    android:id="@+id/settings"
+                    android:layout_width="50dp"
+                    android:contentDescription="something"
+                    android:layout_height="50dp"
+                    android:background="@drawable/settings"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:onClick="navClick"
+                    />
+            </FrameLayout>
+
+
+
+        </LinearLayout>
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/camera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/eye"
-        app:layout_anchor="@id/bottomNavigationView"
+        android:onClick="navClick"
+        app:tint="@color/solidGreen"
+        app:layout_anchor="@id/bottomAppBar"
         app:maxImageSize="40dp"
         app:fabCustomSize="70dp"
-
 
         />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
